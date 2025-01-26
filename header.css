@@ -1,0 +1,229 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: rgb(99, 0, 99);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+    font-weight: 1000px;
+}
+
+/* Navigation */
+.nav_sty {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+}
+
+nav a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: white;
+    color: rgb(125, 0, 125);
+}
+/* Header Icons (Search and Profile) */
+.header-icons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 10px;
+}
+
+.search-icon,
+.profile-icon,
+.notifications-icon {
+    position: relative;
+}
+
+.search-icon i,
+.profile-icon i,
+.notifications-icon i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.search-icon i:hover,
+.profile-icon i:hover,.notifications-icon i:hover {
+    background-color: white;
+    color: rgb(125, 0, 125);
+}
+
+/* Search Menu */
+.search-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: rgb(99, 0, 99);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 150px;
+}
+
+.search-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-menu ul li {
+    padding: 8px;
+}
+
+.search-menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.search-menu ul li:hover {
+    background-color: rgb(125, 0, 125);
+    color: white;
+}
+
+/* Profile Icon */
+.profile-icon a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.profile-icon a:hover {
+    color: rgb(125, 0, 125);
+}
+
+
+/* Login Button */
+.login-btn {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0.8rem 1.5rem;
+    background-color: violet;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+}
+
+.login-btn:hover {
+    background-color: darkviolet;
+}
+.menu-icon {
+    display: none; /* Hide the menu icon by default */
+}
+
+/* Tablet View: Max Width 768px */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide the default nav menu */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon */
+        cursor: pointer;
+    }
+
+    .menu {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: rgb(99, 0, 99);
+        border-radius: 10px;
+        padding: 10px;
+        gap: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        display: none; /* Initially hidden */
+    }
+
+    .menu.show {
+        display: flex; /* Show when toggled */
+    }
+
+    nav a {
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    nav a:last-child {
+        border-bottom: none;
+    }
+
+    header h1 {
+        font-size: 20px; /* Smaller header font size */
+    }
+
+    header {
+        position: relative;
+        padding: 10px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
+
+/* Mobile View: Max Width 480px */
+@media (max-width: 480px) {
+    .heading {
+        font-size: 24px; /* Smaller for mobile screens */
+        text-align: center;
+    }
+
+    .container {
+        gap: 10px;
+        align-items: center;
+    }
+
+    .card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .card h2 {
+        font-size: 16px;
+    }
+
+    header h1 {
+        font-size: 18px; /* Even smaller for compact screens */
+    }
+
+    .login-btn {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
